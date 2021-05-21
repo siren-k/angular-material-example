@@ -5,14 +5,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

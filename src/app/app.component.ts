@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -24,4 +26,17 @@ export class AppComponent {
   ]);
 
   matcher = new MyErrorStateMatcher();
+
+  constructor(private dialog: MatDialog) {
+
+  }
+
+  openDialog(): void {
+    console.log('openDialog()');
+
+    this.dialog.open(DialogComponent, {
+      width: '250px'
+    });
+  }
+
 }
